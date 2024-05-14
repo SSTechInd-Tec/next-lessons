@@ -3,6 +3,7 @@
 import '@mantine/core/styles.css';
 
 import { ColorSchemeScript, MantineProvider } from '@mantine/core';
+import MyNavBar from '@/components/Organisms/MyNavBar/MyNavbar';
 
 export const metadata = {
   title: 'My Mantine app',
@@ -16,7 +17,9 @@ export default function RootLayout({children}) {
         <ColorSchemeScript />
       </head>
       <body>
-        <MantineProvider>{children}</MantineProvider>
+        <MantineProvider>
+          <MyNavBar>{children}</MyNavBar>
+        </MantineProvider>
       </body>
     </html>
   );
