@@ -1,6 +1,7 @@
 'use client'
 
 import { Box, Button, Checkbox, Grid, Input, PasswordInput, Select, Table } from "@mantine/core";
+import { notifications } from "@mantine/notifications";
 import { IconSend } from "@tabler/icons-react";
 import { useState } from "react";
 
@@ -26,6 +27,13 @@ export default function Form() {
             password: password,
             gender: gender,
             agree: agree
+        })
+        notifications.show({
+            title: "Success",
+            color: 'red',
+            icon: <IconSend />,
+            autoClose: 1000,
+            message: "Successfully Register"
         })
     }
 
